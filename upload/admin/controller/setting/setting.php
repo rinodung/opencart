@@ -345,7 +345,7 @@ class ControllerSettingSetting extends Controller {
 			);
 		}
 
-		date_default_timezone_set($this->config->get('config_timezone'));
+		date_default_timezone_set("UTC");
 
 		if (isset($this->request->post['config_language'])) {
 			$data['config_language'] = $this->request->post['config_language'];
